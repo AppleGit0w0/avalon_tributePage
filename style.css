@@ -1,11 +1,12 @@
 /*Color Palette*/
 :root {
-	--silver: #cdcdcd;
+	--silver: #e6e6e6;
 	--title-backing: #a2a0a1;
-	--gold: #d88d0e;
+	--gold: #ffc038;
 	--electric-blue: #6cb9c4;
 }
 
+/*Defaults*/
 * {
 	margin: 0;
 	padding: 0;
@@ -17,6 +18,7 @@
 	box-sizing: inherit;
 }
 
+/*General*/
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -29,59 +31,6 @@ body {
 	width: 70vw;
 	margin: auto;
 	background-color: var(--silver);
-	text-align: center;
-}
-
-main {
-	margin: 4rem auto;
-}
-
-section {
-	margin: 4rem auto;
-}
-
-p {
-	text-align: left;
-	margin: 2rem auto;
-}
-.works {
-	display: flex;
-	text-align: left;
-	align-items: center;
-	margin: 2rem auto;
-}
-
-.works p {
-	margin: 0 2rem;
-}
-
-.works-img {
-	height: 30rem;
-	width: 40rem;
-	object-fit: cover;
-}
-
-.works-img:hover {
-	transform: scale(1.5);
-	transition: all .2s ease-in-out;
-	cursor: pointer;
-}
-
-.quote,
-blockquote {
-	color: var(--gold);
-	font-family: Lato, sans-serif;
-	font-weight: 700;
-	font-style: italic;
-	text-align: center;
-}
-
-.quote {
-	margin-top: .5rem;
-}
-
-img {
-	border-radius: 1rem;
 }
 
 h1,
@@ -91,10 +40,34 @@ h2 {
 	background-color: var(--title-backing);
 	border-radius: 1rem;
 	color: white;
-	align-items: center;
-
+	text-align: center;
 }
 
+p {
+	text-align: left;
+	margin: 2rem auto;
+}
+
+section {
+	margin: 4rem auto;
+}
+
+img {
+	border-radius: 1rem;
+}
+
+@media (max-width: 650px) {
+	html {
+		font-size: 50%;
+	  }
+
+}
+/*General*/
+
+/*Heading*/
+main {
+	margin: 4rem auto;
+}
 
 #img-div {
 	display: flex;
@@ -108,3 +81,73 @@ h2 {
 	
 }
 
+main p {
+	text-align: center;
+}
+/*Heading*/
+
+/*Notable Works*/
+.works {
+	display: flex;
+	
+	text-align: left;
+	align-items: center;
+	margin: 2rem auto;
+}
+
+.works p {
+	margin: 2rem;
+}
+
+.works-img {
+	height: 30rem;
+	width: 22vw;
+	min-width: 30vw;
+	object-fit: cover;
+}
+
+.works-img:hover {
+	transform: scale(1.5);
+	transition: all .2s ease-in-out;
+	cursor: crosshair;
+}
+@media (max-width: 650px) {
+	.works {
+		flex-wrap: wrap;
+	}
+	.works-img {
+		width: 80vw;
+	}
+}
+/*Notable Works*/
+
+/*Quotations*/
+.quote,
+blockquote {
+	color: var(--gold);
+	font-family: Lato, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+	text-align: center;
+}
+
+.quote {
+	margin-top: .5rem;
+}
+/*Quotations*/
+
+/*Footer*/
+footer p {
+	text-align: center;
+	color: white;
+	border-radius: 1rem;
+	padding: 1.5rem;
+	background-color: var(--title-backing);
+	margin: 5rem auto;
+}
+
+footer a {
+	text-decoration: none;
+	color: var(--gold)
+}
+/*Footer*/
